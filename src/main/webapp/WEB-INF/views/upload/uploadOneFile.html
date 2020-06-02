@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body th:replace="/upload/_menu :: copy">
+<h3>Upload One File:</h3>
+<form  method="POST" th:action=""
+       enctype="multipart/form-data">
+    Description:
+    <br>
+    <input th:field="${myUploadForm.setDescription}" style="width:300px;"/>
+    <br/><br/>
+    File to upload: <input th:field="${fileDatas}" type="file"/><br />
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>

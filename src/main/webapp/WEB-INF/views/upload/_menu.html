@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body th:fragment="copy">
+    <div style="border:1px solid #ccc;padding:5px;">
+
+        <a th:href="@{/uploadOneFile}">Upload One File</a>&nbsp;|&nbsp;
+
+        <a th:href="@{/uploadMultiFile}">Upload Multi File</a>
+
+    </div>
+
+<h3>Upload Multiple File:</h3>
+
+<form method="POST" th:action=""
+      enctype="multipart/form-data" >
+
+
+    Description:
+
+    <br>
+
+    <input th:field="${myUploadForm.Description}" style="width:300px;"/>
+
+    <br/><br/>
+
+    File to upload (1): <input th:field="${fileDatas}" type="file"/><br />
+
+    File to upload (2): <input th:field="${fileDatas}" type="file"/><br />
+
+    File to upload (3): <input th:field="${fileDatas}"type="file"/><br />
+
+    File to upload (4): <input th:field="${fileDatas}"type="file"/><br />
+
+    File to upload (5): <input th:field="${fileDatas}" type="file"/><br />
+
+    <input type="submit" value="Upload">
+
+</form>
+</body>
+</html>
