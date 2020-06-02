@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body th:replace="/upload/_menu :: copy">
 <h3>Upload One File:</h3>
-<form  method="POST" th:action=""
-       enctype="multipart/form-data">
 
+<form  method="POST"
+       enctype="multipart/form-data" th:object="${myUploadForm}">
     Description:
     <br>
-    <input th:field="${description}" style="width:300px;"/>
+    <input th:field="*{description}" style="width:300px;"/>
     <br/><br/>
-    File to upload(1): <input th:field="${fileDatas}" type="file"/><br />
-    File to upload(2): <input th:field="${fileDatas}" type="file"/><br />
-    File to upload(3): <input th:field="${fileDatas}" type="file"/><br />
-    File to upload(4): <input th:field="${fileDatas}" type="file"/><br />
+    File to upload(1): <input th:field="*{fileDatas}" type="file"/><br />
+    File to upload(2): <input th:field="*{fileDatas}" type="file"/><br />
+    File to upload(3): <input th:field="*{fileDatas}" type="file"/><br />
+    File to upload(4): <input th:field="*{fileDatas}" type="file"/><br />
 
     <input type="submit" value="Upload">
 </form>
