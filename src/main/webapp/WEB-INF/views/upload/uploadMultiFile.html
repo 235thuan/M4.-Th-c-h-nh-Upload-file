@@ -8,10 +8,10 @@
 
 <h3>Upload Multiple File:</h3>
 <form  method="POST" th:action=""
-       enctype="multipart/form-data">
+       enctype="multipart/form-data" th:object="${myUploadForm}">
     Description:
     <br>
-    <input th:field="${myUploadForm.setDescription}" style="width:300px;"/>
+    <input th:field="*{description}" style="width:300px;"/>
 
     <br/><br/>
 

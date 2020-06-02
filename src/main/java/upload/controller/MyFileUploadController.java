@@ -60,13 +60,13 @@ public class MyFileUploadController {
     }
 
     @PostMapping("/uploadMultiFile")
+//    public String uploadMultiFileHandlerPOST( HttpServletRequest request,Model model, @ModelAttribute MyUploadFormImpl myUploadForm){
     public ModelAndView uploadMultiFileHandlerPOST(
             HttpServletRequest request){
         return this.doUpload(request);
     }
 
     private ModelAndView doUpload(HttpServletRequest request) {
-
         String description = myUploadForm.getDescription();
         System.out.println("Description: " + description);
         String uploadRootPath = request.getServletContext().getRealPath("upload");

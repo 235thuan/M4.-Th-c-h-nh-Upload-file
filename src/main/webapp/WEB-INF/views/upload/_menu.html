@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -16,14 +16,14 @@
 <h3>Upload Multiple File:</h3>
 
 <form method="POST" th:action=""
-      enctype="multipart/form-data" >
+      enctype="multipart/form-data" th:object="${myUploadForm}">
 
 
     Description:
 
     <br>
 
-    <input th:field="${myUploadForm.Description}" style="width:300px;"/>
+    <input th:field="*{description}" style="width:300px;"/>
 
     <br/><br/>
 
